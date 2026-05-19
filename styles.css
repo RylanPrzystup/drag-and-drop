@@ -1,0 +1,42 @@
+body {
+      font-family: Arial, sans-serif; /* Sets the page font */
+      text-align: center; /* Centers text on the page */
+      padding-top: 40px; /* Adds space at the top */
+    }
+
+
+
+
+    #box {
+      width: 120px; /* Box width */
+      height: 120px; /* Box height */
+      background-color: steelblue; /* Box background color */
+      color: white; /* Text color inside the box */
+      display: flex; /* Uses flexbox for centering */
+      justify-content: center; /* Centers text left to right */
+      align-items: center; /* Centers text top to bottom */
+      margin: 20px auto; /* Adds top/bottom space and centers the box horizontally */
+      cursor: grab;  /* Shows a grab cursor */
+      border-radius: 8px; /* Rounds the box corners */
+    }
+
+
+
+
+    #dropZone {
+      width: 300px; /* Drop zone width */
+      height: 180px; /* Drop zone height */
+      border: 3px dashed gray; /* Dashed border to show a drop target */
+      margin: 30px auto; /* Adds space and centers the zone */
+      border-radius: 8px; /* Rounds the drop zone corners */
+      display: flex; /* Uses flexbox for centering */
+      justify-content: center; /* Centers content horizontally */
+      align-items: center; /* Centers content vertically */
+    }
+
+
+
+
+    .hovered {
+      background-color: #4ed2e4; /* Changes background while the item is over the zone */
+    }
