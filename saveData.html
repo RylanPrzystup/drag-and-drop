@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON practice</title>
+</head>
+<body>
+    <input type="text" name="nameInput" id="nameInput">
+    <button onclick="nameSubmit()">Submit</button>
+    <p id="username">No name entered</p>
+
+    <script>
+        const username = document.getElementById('username')
+        const nameInput = document.getElementById("nameInput")
+        let storedInfo = {
+            name : "no name provided"
+        }
+
+        //load saved data
+        let saved = localStorage.getItem('storedInfo'        )
+
+        if(saved !== null){
+            storedInfo = JSON.parse(saved)
+        }
+
+        username.innerHTML= storedInfo.name
+
+        //submit function
+
+        function nameSubmit(){
+            storedInfo.name = nameInput.value 
+            nameInput.value = ''
+
+            localStorage.setItem('storedInfo', JSON.stringify(storedInfo))
+
+            username.innerHTML = storedInfo.name
+        }
+    </script>
+</body>
+</html>
